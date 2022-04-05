@@ -5,7 +5,7 @@ module.exports = {
                 useBuiltIns: "usage",
                 corejs: 3,
                 debug: true,
-                targets: "> 30%, not dead"
+                targets: "> 0.1%, not dead"
             }
         ]
     ]
