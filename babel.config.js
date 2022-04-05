@@ -1,13 +1,11 @@
-const { UseBuiltInsOption } = require("@babel/preset-env/lib/options");
-
 module.exports = {
     presets: [
         [
             "@babel/preset-env", {
-                UseBuiltIns: "usage",
+                useBuiltIns: "usage",
                 corejs: 3,
                 debug: true,
-                targets: ">30%, not dead"
+                targets: "> 30%, not dead"
             }
         ]
     ]
