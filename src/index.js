@@ -66,3 +66,5 @@ url.searchParams.append("key", "defjqrefyqzef35e54fe");
 url.searchParams.set("key2", "hfgefgzdgzd");
 
 console.log(url);
+
+console.log("ok push");
