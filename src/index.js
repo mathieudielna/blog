@@ -81,34 +81,34 @@ const xhr = new XMLHttpRequest();
 xhr.open("POST", "https://jsonplaceholder.typicode.com/todos");
 
 // xhr.timeout = 100;
-xhr.responseType = "json";
+// xhr.responseType = "json";
 
-xhr.setRequestHeader("Content-type", "application/json");
+// xhr.setRequestHeader("Content-type", "application/json");
 
-xhr.send(JSON.stringify(todo));
-//xhr.abort();
-xhr.addEventListener("load", response => {
-    console.log(response);
-    console.log(xhr.status);
-    const result = xhr.response;
-    console.log(result);
-});
+// xhr.send(JSON.stringify(todo));
+// xhr.abort();
+// xhr.addEventListener("load", response => {
+//     console.log(response);
+//     console.log(xhr.status);
+//     const result = xhr.response;
+//     console.log(result);
+// });
 
-xhr.addEventListener("error", error => {
-    console.log(error);
-});
+// xhr.addEventListener("error", error => {
+//     console.log(error);
+// });
 
-xhr.addEventListener("progress", progress => {
-    const pourcentage = ((event.loaded / event.total) * 100).toFixed(0);
-    console.log(pourcentage, "%");
-    console.log(progress);
-});
+// xhr.addEventListener("progress", progress => {
+//     const pourcentage = ((event.loaded / event.total) * 100).toFixed(0);
+//     console.log(pourcentage, "%");
+//     console.log(progress);
+// });
 
-xhr.addEventListener("readystatechange", event => {
-    console.log(event);
-    console.log(xhr.readyState);
-});
+// xhr.addEventListener("readystatechange", event => {
+//     console.log(event);
+//     console.log(xhr.readyState);
+// });
 
-xhr.addEventListener("timeout", event => {
-    console.log(event);
-});
+// xhr.addEventListener("timeout", event => {
+//     console.log(event);
+// });
