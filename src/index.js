@@ -1,6 +1,8 @@
 // const { async } = require("regenerator-runtime");
 import { even } from "../dist/main.bundle";
 
+// FETCH POST
+
 // const user = {
 //     name: "tofik",
 //     email: "kipo@brief.fr"
@@ -35,23 +37,32 @@ import { even } from "../dist/main.bundle";
 //     console.log(error);
 // });
 
-const form = document.querySelector("form");
+// FORM DATA
 
-form.addEventListener("submit", event => {
-    event.preventDefault();
+// const form = document.querySelector("form");
 
-    const formData = new FormData(form);
+// form.addEventListener("submit", event => {
+//     event.preventDefault();
 
-    formData.append("name", "value");
-    formData.set("email", "email@testing.com");
-    console.log(formData.get("email"));
+//     const formData = new FormData(form);
 
-    for (let pair of formData) {
-        console.log(pair);
-    }
+//     formData.append("name", "value");
+//     formData.set("email", "email@testing.com");
+//     console.log(formData.get("email"));
 
-    fetch("/test", {
-        method: "POST",
-        body: formData
-    });
-});
+//     for (let pair of formData) {
+//         console.log(pair);
+//     }
+
+//     fetch("/test", {
+//         method: "POST",
+//         body: formData
+//     });
+// });
+
+const url = new URL("https://wikipedia.fr");
+
+url.searchParams.append("key", "defjqrefyqzef35e54fe");
+url.searchParams.set("key2", "hfgefgzdgzd");
+
+console.log(url);
