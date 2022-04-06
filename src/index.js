@@ -60,11 +60,55 @@ import { even } from "../dist/main.bundle";
 //     });
 // });
 
-const url = new URL("https://wikipedia.fr");
+// URL
+// const url = new URL("https://wikipedia.fr");
 
-url.searchParams.append("key", "defjqrefyqzef35e54fe");
-url.searchParams.set("key2", "hfgefgzdgzd");
+// url.searchParams.append("key", "defjqrefyqzef35e54fe");
+// url.searchParams.set("key2", "hfgefgzdgzd");
 
-console.log(url);
+// console.log(url);
 
-console.log("ok push");
+// console.log("ok push");
+
+// XMLHTTPREQUEST
+const todo = {
+    completed: false,
+    title: "Parle Français mon frère",
+    userId: 9999
+};
+
+const xhr = new XMLHttpRequest();
+xhr.open("POST", "https://jsonplaceholder.typicode.com/todos");
+
+// xhr.timeout = 100;
+xhr.responseType = "json";
+
+xhr.setRequestHeader("Content-type", "application/json");
+
+xhr.send(JSON.stringify(todo));
+//xhr.abort();
+xhr.addEventListener("load", response => {
+    console.log(response);
+    console.log(xhr.status);
+    const result = xhr.response;
+    console.log(result);
+});
+
+xhr.addEventListener("error", error => {
+    console.log(error);
+});
+
+xhr.addEventListener("progress", progress => {
+    const pourcentage = ((event.loaded / event.total) * 100).toFixed(0);
+    console.log(pourcentage, "%");
+    console.log(progress);
+});
+
+xhr.addEventListener("readystatechange", event => {
+    console.log(event);
+    console.log(xhr.readyState);
+});
+
+xhr.addEventListener("timeout", event => {
+    console.log(event);
+});
