@@ -1,0 +1,25 @@
+/* phone and down */
+
+@mixin xs {
+    @media(max-width: 480px) {
+        @content;
+    }
+}
+
+
+/* phone to portrait tablette */
+
+@mixin sm {
+    @media(max-width: 767px) {
+        @content;
+    }
+}
+
+
+/* phone and down */
+
+@mixin md {
+    @media(max-width: 768px) and (min-width: 979px) {
+        @content;
+    }
+}
