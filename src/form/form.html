@@ -5,11 +5,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form</title>
+    <title>Formulaire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <a href="./index.html">Accueil</a>
+    <div class="container">
+        <header>
+            <a class="header-brand" href="./index.html">Blog</a>
+            <ul>
+                <li>
+                    <a class="header-nav" href="./index.html">Accueil</a>
+                </li>
+                <li>
+                    <a class="header-nav active" href="./form.html">form</a>
+                </li>
+            </ul>
+        </header>
+        <div class="content">
+            <form>
+                <h2 class="title-underline">Ajouter un article</h2>
+                <div class="form-group">
+                    <label>Auteur</label>
+                    <input type="text" name="author">
+                </div>
+                <div class="form-group">
+                    <label>Categorie</label>
+                    <input type="text" name="Category">
+                </div>
+                <div class="form-group">
+                    <label>Article</label>
+                    <textarea name="content"></textarea>
+                </div>
+                <div class="form-btn-container">
+                    <button class="btn btn-secondary">Annuler</button>
+                    <button class="btn btn-primary">Sauvegarder</button>
+                </div>
+            </form>
+        </div>
+        <footer>&copy; 2022 DM</footer>
 </body>
+<!-- <a href="./form.html">form</a> <img src="./assets/img/demo.png" width="300px"> -->
 
 </html>

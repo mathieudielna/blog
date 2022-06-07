@@ -4,3 +4,52 @@
 @import "variables";
 @import "media-queries";
 @import "classes";
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid: "header" auto "content" 1fr "footer" auto / auto
+}
+
+header {
+    grid-area: header;
+    background: var(--dark);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    .header-brand {
+        font-size: 4rem;
+        font-weight: 700;
+    }
+    a {
+        color: white;
+    }
+    ul {
+        display: flex;
+        li {
+            .header-nav {
+                font-size: 1.4rem;
+                padding: 0 10px;
+            }
+            .active {
+                font-weight: 700;
+                text-decoration: underline 2px;
+                text-underline-offset: 0.5rem;
+            }
+        }
+    }
+}
+
+.content {
+    grid-area: content;
+    background: white;
+}
+
+footer {
+    grid-area: footer;
+    padding: 2rm;
+    background: var(--dark-grey);
+    font-size: 1.4rem;
+    text-align: center;
+    color: white;
+}
