@@ -43,6 +43,7 @@ header {
 .content {
     grid-area: content;
     background: white;
+    background: var(--divider);
 }
 
 footer {
