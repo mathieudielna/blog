@@ -13,7 +13,7 @@ form.addEventListener("submit", async event => {
     if (formIsValid(obj)) {
         try {
             const json = JSON.stringify(obj);
-            const response = await fetch("https://restapi.fr/api/blogmd", {
+            const response = await fetch("https://restapi.fr/api/bfd", {
                 method: "POST",
                 body: json,
                 headers: {
@@ -39,7 +39,7 @@ form.addEventListener("submit", async event => {
 });
 
 const formIsValid = obj => {
-    if (!obj.author || !obj.category || !obj.content) {
+    if (!obj.author || !obj.category || !obj.content || !obj.img || !obj.title) {
         errors.push("Tout les champs doivent être complèter!");
     } else {
         errors = [];
